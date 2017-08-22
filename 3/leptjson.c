@@ -19,9 +19,9 @@
 #define PUTC(c, ch)      do {*(char*)lept_context_push(c, sizeof(char)) = (ch); } while(0)
 
 typedef struct {
-    const char* json;
-    char* stack;
-    size_t size, top;
+    const char*  json;
+    char*        stack;
+    size_t       size, top;
 }lept_context;
 
 // push
