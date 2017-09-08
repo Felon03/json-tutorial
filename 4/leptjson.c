@@ -177,7 +177,7 @@ static int lept_parse_string(lept_context* c, lept_value* v)
                                 STRING_ERROR(LEPT_PARSE_INVALID_UNICODE_SURROGATE);
                             // u = 0x10000 + (u - 0xD800) * 0x400 + (u2 - 0xDC00);
                             // HEX: 0x400 DEC: 1024 BIN: 0100 0000 0000
-                            // A * 0x400 == a << 10;
+                            // A * 0x400 == A << 10;
                             // e.g. 0001 << 10 = 0100 0000 0000
                             // 1000 << 10 = 0010 0000 0000 0000
                             u = (((u - 0xD800) << 10) | (u2 - 0xDC00)) + 0x10000;                       
